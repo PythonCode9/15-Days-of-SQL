@@ -1,6 +1,8 @@
-## SQL Day 01: Basic SQL Syntax
+# SQL Day 01: Basic SQL Syntax
 
-### Introduction
+## Introduction:
+
+### SQL
 
 SQL, which stands for Structured Query Language, is a programming language used to communicate with and manage databases. It's a standard language for manipulating data held in relational database management systems (RDBMS) or for stream processing in a relational data stream management system (RDSMS).  SQL was first developed by IBM in the 1970s.
 
@@ -36,20 +38,20 @@ The term "relational database" comes from the concept of a relation—a set of t
 
 SQL (Structured Query Language) databases are also known as relational databases. They have a predefined schema, and data is stored in tables consisting of rows and columns. SQL databases follow the ACID (Atomicity, Consistency, Isolation, Durability) properties to ensure reliable transactions. Some popular SQL databases include MySQL, PostgreSQL, and Microsoft SQL Server.
 
-### Advantages of SQL Databases
+#### Advantages of SQL Databases
 
 * **Predefined schema:** Ideal for applications with a fixed structure.
 * **ACID transactions:** Ensures data consistency and reliability.
 * **Support for complex queries:** Rich SQL queries can handle complex data relationships and aggregation operations.
 * **Scalability:** Vertical scaling by adding more resources to the server (e.g., RAM, CPU).
 
-### Limitations of SQL Databases
+#### Limitations of SQL Databases
 
 * **Rigid schema:** Data structure updates are time-consuming and can lead to downtime.
 * **Scaling:** Difficulties in horizontal scaling and sharding of data across multiple servers.
 * **Not well-suited for hierarchical data:** Requires multiple tables and JOINs to model tree-like structures.
 
-### Basic SQL Keywords
+## Basic SQL Keywords
 
 SQL employs a number of standard command keywords that are integral to interacting with databases. Keywords in SQL provide instructions as to what action should be performed. Here are some of the primary SQL keywords:
 
@@ -85,7 +87,7 @@ SQL employs a number of standard command keywords that are integral to interacti
     DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
     ```
 
-### Data Types
+## Data Types
 
 SQL data types define the type of data that can be stored in a database table's column. Depending on the DBMS, the names of the data types can differ slightly. Here are the general types:
 
@@ -106,8 +108,6 @@ SQL data types define the type of data that can be stored in a database table's 
         Price DECIMAL(5,2)
     );
     ```
-
-### Data Types (Continued)
 
 * **CHAR:** Used for fixed-length strings.
     * **Example:**
@@ -152,7 +152,7 @@ SQL data types define the type of data that can be stored in a database table's 
 Remember, the specific syntax for creating tables and defining column data types can vary slightly depending on the SQL database you are using (MySQL, PostgreSQL, SQL Server, SQLite, Oracle, etc.), but the general concept and organization of data types is cross-platform.
 
 
-### Operators
+## Operators
 
 SQL operators are used to perform operations like comparisons and arithmetic calculations. They are crucial for forming queries. SQL operators are divided into the following types:
 
@@ -206,42 +206,31 @@ SQL operators are used to perform operations like comparisons and arithmetic cal
 Remember, the data type of the result depends on the types of the operands.
 
 
-### Statements
+## Statements
 
-#### SELECT
-
-The `SELECT` statement is used in SQL to pick out specific data from a database. In other words, it's used to select from the database what you want to display. The syntax for the `SELECT` statement is fairly straightforward:
-
-```sql
-SELECT column(s)
-FROM table
-WHERE condition;
+* **SELECT:**
+   * The `SELECT` statement is used in SQL to pick out specific data from a database. In other words, it's used to select from the database what you want to display. The syntax for the `SELECT` statement is fairly straightforward:
+   * ```sql
+     SELECT column(s)
+     FROM table
+     WHERE condition;```
 
 
 
-Absolutely, here's the converted markdown file for the provided SQL statements explanation:
 
-## SQL Statements: Retrieving, Adding, Updating, and Deleting Data
-
-This section explores fundamental SQL statements used to interact with data in a relational database:
-
-### 1. SELECT: Retrieving Data
-
-The `SELECT` statement allows you to retrieve specific data from a database table. It's essentially a way to pick and choose what information you want to see. Here's the basic syntax:
-
-```sql
-SELECT column(s)
-FROM table
-WHERE condition;
-```
-
-**Explanation:**
-
-* `column(s)`: Enter the name(s) of the column(s) you want to display, separated by commas.
-* `table`: The name of the table from which you want to retrieve data.
-* `WHERE (Optional)`: This clause filters the results based on a specified condition. It allows you to select only rows that meet certain criteria.
-
-**Example:**
+* **SELECT:**
+   * The `SELECT` statement allows you to retrieve specific data from a database table. It's essentially a way to pick and choose what information you want to see. Here's the basic syntax:
+   * ```sql
+     SELECT column(s)
+     FROM table
+     WHERE condition;
+     ```
+    * **Explanation:**
+     * `column(s)`: Enter the name(s) of the column(s) you want to display, separated by commas.
+     *  `table`: The name of the table from which you want to retrieve data.
+     *  * `WHERE (Optional)`: This clause filters the results based on a specified condition. It allows you to select only rows that meet certain criteria.
+          
+    * **Example:**
 
 To select all data from the "Customers" table:
 
