@@ -207,72 +207,51 @@ Remember, the data type of the result depends on the types of the operands.
 
 
 ## Statements
+* **SELECT:** The `SELECT` statement is used in SQL to pick out specific data from a database. In other words, it's used to select from the database what you want to display. The syntax for the `SELECT` statement is fairly straightforward:
+    ```sql
+    SELECT column(s)
+    FROM table
+    WHERE condition;
+    ```
 
-* **SELECT:**
-   * The `SELECT` statement is used in SQL to pick out specific data from a database. In other words, it's used to select from the database what you want to display. The syntax for the `SELECT` statement is fairly straightforward:
-   * ```sql
-     SELECT column(s)
-     FROM table
-     WHERE condition;```
-
-
-
-
-* **SELECT:**
-   * The `SELECT` statement allows you to retrieve specific data from a database table. It's essentially a way to pick and choose what information you want to see. Here's the basic syntax:
-   * ```sql
-     SELECT column(s)
-     FROM table
-     WHERE condition;
-     ```
-    * **Explanation:**
-     * `column(s)`: Enter the name(s) of the column(s) you want to display, separated by commas.
-     *  `table`: The name of the table from which you want to retrieve data.
-     *  * `WHERE (Optional)`: This clause filters the results based on a specified condition. It allows you to select only rows that meet certain criteria.
+    **Explanation:**
+    * `column(s)`: Enter the name(s) of the column(s) you want to display, separated by commas.
+    * `table`: The name of the table from which you want to retrieve data.
+    * `WHERE (Optional)`: This clause filters the results based on a specified condition. It allows you to select only rows that meet certain criteria.
           
-    * **Example:**
-
-To select all data from the "Customers" table:
-
-```sql
-SELECT *
-FROM Customers;
-```
-
-The asterisk (`*`) signifies "all," meaning this query retrieves every record from the "Customers" table.
-
-**Additional Features:**
-
-* Selecting Specific Columns: You can choose specific columns instead of all by listing their names after `SELECT`.
-
-```sql
-SELECT FirstName, LastName
-FROM Customers;
-```
-
-* Filtering with WHERE Clause: The `WHERE` clause enables you to filter results. For instance, to select customers from the UK:
-
-```sql
-SELECT *
-FROM Customers
-WHERE Country='UK';
-```
-
-* Sorting with ORDER BY: Use the `ORDER BY` clause to sort the retrieved data:
-
-   * `ORDER BY`: Sorts results in ascending order.
-   * `ORDER BY DESC`: Sorts results in descending order.
-
-```sql
-SELECT *
-FROM Customers
-ORDER BY Country;  -- Ascending order
-```
-
-These are the fundamentals of the `SELECT` statement, a crucial tool for working with databases.
+    **Example:**
+      To select all data from the "Customers" table:
+    ```sql
+    SELECT *
+    FROM Customers;
+    ```
+     The asterisk (`*`) signifies "all," meaning this query retrieves every record from the "Customers" table.
+    **Explanation:**
+    Selecting Specific Columns: You can choose specific columns instead of all by listing their names after `SELECT`.
+    ```sql
+    SELECT FirstName, LastName
+    FROM Customers;
+    ```
+    **Explanation:**
+     Filtering with WHERE Clause: The `WHERE` clause enables you to filter results. For instance, to select customers from the UK:
+    ```sql
+    SELECT *
+    FROM Customers
+    WHERE Country='UK';
+    ```
+    Sorting with ORDER BY: Use the `ORDER BY` clause to sort the retrieved data:
+    
+     * `ORDER BY`: Sorts results in ascending order.
+     * `ORDER BY DESC`: Sorts results in descending order.
+    ```sql
+    SELECT *
+    FROM Customers
+    ORDER BY Country;  -- Ascending order
+    ```
+      These are the fundamentals of the `SELECT` statement, a crucial tool for working with databases.
 
 
-### 2. INSERT: Adding New Data
+* **INSERT: Adding New Data**
 
 The `INSERT` statement is used to add new rows of data to a table. It comes in three main forms:
 
@@ -280,7 +259,7 @@ The `INSERT` statement is used to add new rows of data to a table. It comes in t
 * `INSERT INTO set`
 * `INSERT INTO select`
 
-**2.1 INSERT INTO values:**
+* **INSERT INTO VALUES:**
 
 This form specifies both the column names and the values to be inserted:
 
@@ -289,7 +268,7 @@ INSERT INTO table_name (column1, column2, column3, ...)
 VALUES (value1, value2, value3, ...);
 ```
 
-**2.2 INSERT INTO set:**
+* **INSERT INTO SET:**
 
 This form uses the `SET` keyword to specify each column and its corresponding value:
 
@@ -298,7 +277,7 @@ INSERT INTO table_name
 SET column1 = value1, column2 = value2, ...;
 ```
 
-**2.3 INSERT INTO select:**
+* **INSERT INTO SELECT:**
 
 This form allows you to copy data from another table:
 
@@ -312,7 +291,7 @@ WHERE condition;
 **Important Note:** When inserting data, columns with default values don't need to be included in the `INSERT INTO` statement. However, be cautious as SQL doesn't have a confirmation step. Once you execute the insert, the data is added permanently.
 
 
-## 3. UPDATE: Modifying Existing Data
+* **UPDATE: Modifying Existing Data**
 
 The `UPDATE` statement allows you to modify existing data within a database table. It's a powerful tool when you need to change specific values in existing rows. Here's the syntax:
 
@@ -322,7 +301,7 @@ SET column1 = value1, column2 = value2, ...
 WHERE condition;
 ```
 
-**Explanation:**
+* **Explanation:**
 
 * `table_name`: The name of the table where the update will occur.
 * `SET`: This clause specifies the columns being updated and their new values.
@@ -330,7 +309,7 @@ WHERE condition;
 * `value1, value2, ...`: The new values to be assigned to the respective columns.
 * `WHERE`: This clause defines the conditions for selecting the rows to be updated.
 
-**Example:**
+* **Example:**
 
 Consider an "Employees" table:
 
@@ -356,14 +335,14 @@ This would permanently update the "Employees" table:
 | 2          | Dustin    | Clerk     | 30000  |
 | 3          | Emory     | Engineer  | 45000  |
 
-**Caution:** Be mindful when using the `UPDATE` statement. If you omit the `WHERE` clause, all rows in the table will be updated!
+* **Caution:** Be mindful when using the `UPDATE` statement. If you omit the `WHERE` clause, all rows in the table will be updated!
 
 
-## 4. DELETE: Removing Data
+* **DELETE: Removing Data**
 
 The `DELETE` statement allows you to remove existing records from a database table. It's a destructive operation, so use it with caution as it permanently removes data. Here's what you can achieve with `DELETE`:
 
-**Delete All Rows:**
+* **Delete All Rows:**
 
 The `DELETE` statement without a `WHERE` clause removes all rows from a table. This action is irreversible.
 
@@ -373,7 +352,7 @@ DELETE FROM table_name;
 
 This statement deletes all records from the specified `table_name`.
 
-**Delete Specific Rows:**
+* **Delete Specific Rows:**
 
 Combine the `DELETE` statement with the `WHERE` clause to target specific rows based on a condition.
 
@@ -384,5 +363,5 @@ WHERE condition;
 
 This example removes records from `table_name` that meet the specified `condition`.
 
-**Important Note:** Use `DELETE` cautiously. It can potentially erase important rows or even empty an entire table. The deletion made by `DELETE` is permanent and cannot be undone. Always ensure you have a backup before running a `DELETE` query, especially on a production database.
+* **Important Note:** Use `DELETE` cautiously. It can potentially erase important rows or even empty an entire table. The deletion made by `DELETE` is permanent and cannot be undone. Always ensure you have a backup before running a `DELETE` query, especially on a production database.
 
