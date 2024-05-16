@@ -1,1 +1,1 @@
-# 15-Days-of-SQL
+# 15 Days of SQL
