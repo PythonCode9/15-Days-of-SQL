@@ -24,7 +24,7 @@
     - [INSERT](#advanced-operators)
     - [UPDATE](#expression-operators)
     - [DELETE](#advanced-operators)
-  - [💻 Exercises: Day 9](#-exercises---day-1)
+  - [💻 Exercises: Day 1](#-exercises---day-1)
     - [Exercises: Level 1](#exercises-level-1)
     - [Exercises: Level 2](#exercises-level-2)
 
@@ -104,7 +104,7 @@ SQL employs a number of standard command keywords that are integral to interacti
 * **FROM:** This keyword tells you exactly where to look for the data you want in your database.
     * **Example:**
     ```sql
-    SELECT * FROM Customers WHERE Country='UK';
+    SELECT * FROM Customers WHERE Country='America';
     ```
 
 * **INSERT INTO:** This command is used to insert new data into a database.
@@ -248,53 +248,50 @@ Remember, the data type of the result depends on the types of the operands.
 
 ### Advanced Operators
 
-
-
 ## Statements
-* **SELECT:**
+### SELECT: Retrieving Specific Data
+
 The `SELECT` statement is used in SQL to pick out specific data from a database. In other words, it's used to select from the database what you want to display. The syntax for the `SELECT` statement is fairly straightforward:
-    ```sql
-    SELECT column(s)
-    FROM table
-    WHERE condition;
-    ```
-
-    **Explanation:**
-    * `column(s)`: Enter the name(s) of the column(s) you want to display, separated by commas.
-    * `table`: The name of the table from which you want to retrieve data.
-    * `WHERE (Optional)`: This clause filters the results based on a specified condition. It allows you to select only rows that meet certain criteria.
+```sql
+SELECT column(s)
+FROM table
+WHERE condition;
+```
+**Explanation:**
+* `column(s)`: Enter the name(s) of the column(s) you want to display, separated by commas.
+* `table`: The name of the table from which you want to retrieve data.
+* `WHERE (Optional)`: This clause filters the results based on a specified condition. It allows you to select only rows that meet certain criteria.
           
-    **Example:**
-      To select all data from the "Customers" table:
-    ```sql
-    SELECT *
-    FROM Customers;
-    ```
-     The asterisk (`*`) signifies "all," meaning this query retrieves every record from the "Customers" table.
-    **Explanation:**
-    Selecting Specific Columns: You can choose specific columns instead of all by listing their names after `SELECT`.
-    ```sql
-    SELECT FirstName, LastName
-    FROM Customers;
-    ```
-    **Explanation:**
-     Filtering with WHERE Clause: The `WHERE` clause enables you to filter results. For instance, to select customers from the UK:
-    ```sql
-    SELECT *
-    FROM Customers
-    WHERE Country='UK';
-    ```
-    Sorting with ORDER BY: Use the `ORDER BY` clause to sort the retrieved data:
-    
-     * `ORDER BY`: Sorts results in ascending order.
-     * `ORDER BY DESC`: Sorts results in descending order.
-    ```sql
-    SELECT *
-    FROM Customers
-    ORDER BY Country;  -- Ascending order
-    ```
-      These are the fundamentals of the `SELECT` statement, a crucial tool for working with databases.
-
+* **Selecting All Columns:**
+For instance, if you wanted to select all data from the “Customers” table, your query would look like this:
+```sql
+SELECT *
+FROM Customers;
+```
+In the above code, the asterisk * denotes “all”. This will retrieve all of the data in the “Customers” table.
+* **Selecting Specific Columns:**
+Selecting Specific Columns: You can choose specific columns instead of all by listing their names after `SELECT`.
+```sql
+SELECT FirstName, LastName
+FROM Customers;
+```
+* **WHERE Clause:**
+You can also filter using the WHERE clause. For example, selecting only the customers who are from “America”:
+```sql
+SELECT *
+FROM Customers
+WHERE Country='America';
+```
+* **ORDER BY Clause:**
+Sorting with ORDER BY: Use the `ORDER BY` clause to sort the retrieved data:
+* `ORDER BY`: Sorts results in ascending order.
+* `ORDER BY DESC`: Sorts results in descending order.
+```sql
+SELECT *
+FROM Customers
+ORDER BY Country;  -- Ascending order
+```
+These are the very basics of the SELECT statement in SQL, which is a vital part of working with databases.
 
 ### INSERT: Adding New Data
 
