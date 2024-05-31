@@ -8,7 +8,7 @@
 
 | Day | Topics                                                    |
 |------|:---------------------------------------------------------:|
-| 01  |  [Basic SQL Syntax](./readme.md)|
+| 01  |  [Basic SQL Syntax](./Day%2001%3A%20Basic%20SQL%20Syntax/Day%2001.md)|
 | 02  |  [Data Definition Language (DDL)](.Day%2002%3A%20DDL/Day%2002.md)|
 | 03  |  [Data Manipulation Language (DML)](./Day%2003%3A%20DML/Day%2003.md)|
 | 04  |  [Aggregate Queries](./Day%2004%3A%20Aggregate%20Queries/Day%2004.md)|
