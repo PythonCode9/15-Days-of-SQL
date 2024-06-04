@@ -422,8 +422,8 @@ This example removes records from `table_name` that meet the specified `conditio
 | 3          | Emory       | Paris | 
 
 Write a query to:
-* Select all customer names from the Customers table.
-* Select all customers from New York City.
+* What are the names of every customer?
+* Who are the customers that live in New York City?
 
 2. Write a query to display the customer names and their corresponding cities.
 
