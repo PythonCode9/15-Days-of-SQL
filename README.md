@@ -5,7 +5,8 @@
 <small> Second Edition: July, 2024</small>
 </sub></div>
 
-
+<div align="center">
+  
 | Day | Topics                                                    |
 |------|:---------------------------------------------------------:|
 | 01  |  [Basic SQL Syntax](./Day%2001%3A%20Basic%20SQL%20Syntax/Day%2001.md)|
@@ -23,3 +24,5 @@
 | 13  |  [Data Integrity and Security](./Day%2013%3A%20Data%20Integrity%20and%20Security/Day%2013.md)|
 | 14  |  [Tuning](./Day%2014%3A%20Tuning/Day%2014.md)|
 | 15  |  [Advanced SQL Concepts](./Day%2015%3A%20Advanced%20SQL%20Concepts/Day%2015.md)|
+  
+</div>
