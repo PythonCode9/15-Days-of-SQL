@@ -8,7 +8,7 @@
 [<< Day 01](https://github.com/PythonCode9/15-Days-of-SQL/blob/main/Day%2001%3A%20Basic%20SQL%20Syntax/Day%2001.md)
 [Day 03 >>](https://github.com/PythonCode9/15-Days-of-SQL/blame/284988e4491e39111be9b4d22161e06ffa85a61d/Day%2002%3A%20DDL/Day%2002.md)
 - [📘 Day 2](#day-02)
-  - [Create Table](./create-table)
+  - [Create Table](./#create-table)
   - [Drop Table](./drop-table)
   - [Alter Table](./alter-table)
       - [ADD COLUMN](./add-column)
